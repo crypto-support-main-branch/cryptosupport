@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #24292e; /* Dark gray background */
+    color: #ffffff; /* White text color */
+    padding: 20px; /* Padding for header */
+    text-align: center; /* Center align text */
+}
+
+header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2.5em; /* Font size for title */
+}
+
+header nav ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+header nav ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 15px; /* Margin between items */
+}
+
+header nav ul li a {
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Remove underline */
+}
+
+main {
+    padding: 20px; /* Padding for main content */
+}
+
+section {
+    margin-bottom: 30px; /* Space between sections */
+    background: #ffffff; /* White background for sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside sections */
+}
+
+h2 {
+    color: #333; /* Dark gray color for headings */
+}
+
+label {
+    font-weight: 500; /* Semi-bold for labels */
+    margin-top: 10px; /* Space above labels */
+    display: block; /* Make labels block level */
+}
+
+input, select {
+    width: 100%; /* Full width for inputs and selects */
+    padding: 10px; /* Padding inside inputs */
+    margin-top: 5px; /* Space above inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+button {
+    background-color: #007bff; /* Primary button color */
+    color: #ffffff; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding inside button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 10px; /* Space above button */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#confirmation-message {
+    margin-top: 20px; /* Space above confirmation message */
+    padding: 15px; /* Padding for message box */
+    background-color: #e2e3e5; /* Light gray background */
+    border-left: 5px solid #007bff; /* Blue left border */
+}
+
+footer {
+    background: #333; /* Dark gray background */
+    color: #ffffff; /* White text color */
+    text-align: center; /* Center align text */
+    padding: 10px 0; /* Padding for footer */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+}
